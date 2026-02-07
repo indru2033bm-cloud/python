@@ -27,7 +27,28 @@
 
 # x = Tensors.rand(5, 3)
 # print(x)
-import requests
-response = requests.get("https://www.geeksforgeeks.org/python/python-requests-tutorial/")
-print(response.status_code)
-print(response.text)
+# import requests
+# response = requests.get("https://www.geeksforgeeks.org/python/python-requests-tutorial/")
+# print(response.status_code)
+# print(response.text)
+# import pyttsx3
+# engine = pyttsx3.init()
+
+# # For Mac, If you face error related to "pyobjc" when running the `init()` method :
+# # Install 9.0.1 version of pyobjc : "pip install pyobjc>=9.0.1"
+
+# engine.say("I will speak this text it is a text to speech conversion example using pyttsx3 library in python.because it is an offline library it does not require internet connection to work.")
+# engine.runAndWait()
+import os
+
+def list_directory_contents(path='.'):
+    try:
+        contents = os.listdir(path)
+        print(f"Contents of directory '{path}':")
+        for item in contents:
+            print(item)
+    except Exception as e:
+        print(f"Error: {e}")
+
+# Example usage
+list_directory_contents('/path/to/your/directory')
