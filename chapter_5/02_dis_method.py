@@ -12,3 +12,17 @@ marks = {
 # print(marks)
 print(marks.get("Indrajith2")) #returns the value of the key but does not raise an error if the key is not found, instead returns None
 print(marks["Indrajith2"]) #returns the value of the key but raises an error if the key is not found
+
+# ....python methods..........
+
+# clear()
+# copy()
+# fromkeys()
+# get()
+# items()
+# keys()
+# values()
+# pop()
+# popitem()
+# setdefault()
+# update()
