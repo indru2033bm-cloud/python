@@ -2,5 +2,9 @@
 
 with open("poem.txt") as p:
     for poem in p:
-        if poem == "TWINKLE":
-            print(p.read())
+        if poem.startswith("TWINKLE"):
+           print("Poem as TWINKLE")
+           print("\n")
+           print(p.read())  
+           print("\n")  
+
