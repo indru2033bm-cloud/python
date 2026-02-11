@@ -1,9 +1,11 @@
 import random 
+import os
 
-computer = random.choice([1 ,-1 , 0])
+
+
 def game(com,you):
-    if computer == you:
-       print("Its draw!")
+    if com == you:
+        return -1
     elif com == -1 and you == 1:
         # print("You lose!")
         return 0
@@ -23,8 +25,10 @@ def game(com,you):
         # print("You lose!")
         return 0
 
-a = 0
+total_score = 0
+a = 1
 while( a != 0):
+    computer = random.choice([1 ,-1 , 0])
     youst = input("Enter your choice: ")
 
     youdic = {"r" : -1,"p" : 0,"c" : 1}
@@ -38,11 +42,26 @@ while( a != 0):
 
     a =   game(computer,you)
     if a == 1:
-       print("YOU Win!")
-    with open("Hi-score.txt","w") as f:
-        f.write(str(a))
-else :
-    print("you lose!")
+        print("You win!")
+        total_score += 1
+        # if os.path.exists("Hiscore.txt"):
+        with open("Hiscore.txt") as f:
+             hiscore = (f.read())
+             if hiscore != "":
+                 hiscore = int(hiscore)
+             else:
+                 hiscore = 0
+
+        if total_score > hiscore:
+            with open("Hiscore.txt", "w") as f:
+                f.write(str(total_score))
+        else:
+            with open("Hiscore.txt", "w") as f:
+             f.write(str(total_score))
+    elif a == -1:
+        print("Its draw!")
+    else:
+        print("you lose!")
 
 
 
