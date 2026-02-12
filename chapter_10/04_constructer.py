@@ -17,7 +17,7 @@ class Employ:
     def greet():
         print("Good Moring")
     
-indru = Employ("Indrajith","Javascript",1000000)
+a = Employ("Indrajith","Javascript",1000000)
 # indru.language = "Java script\n"
 # indru.getinfo()
-print(indru.language, indru.salary )
+print(a.language, a.salary )
