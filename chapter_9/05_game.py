@@ -42,26 +42,26 @@ while( a != 0):
 
     a =   game(computer,you)
     if a == 1:
-        print("You win!")
-        total_score += 1
-        # if os.path.exists("Hiscore.txt"):
-        with open("Hiscore.txt") as f:
-             hiscore = (f.read())
-             if hiscore != "":
-                 hiscore = int(hiscore)
-             else:
-                 hiscore = 0
+            print("You win!")
+            total_score += 1
+            # if os.path.exists("Hiscore.txt"):
+            with open("Hiscore.txt") as f:
+                hiscore = (f.read())
+                if hiscore != "":
+                    hiscore = int(hiscore)
+                else:
+                    hiscore = 0
 
-        if total_score > hiscore:
-            with open("Hiscore.txt", "w") as f:
-                f.write(str(total_score))
-        else:
-            with open("Hiscore.txt", "w") as f:
-             f.write(str(total_score))
+            if total_score > hiscore:
+                with open("Hiscore.txt", "w") as f:
+                    f.write(str(total_score))
+            else:
+                with open("Hiscore.txt", "w") as f:
+                 f.write(str(total_score))
     elif a == -1:
-        print("Its draw!")
+            print("Its draw!")
     else:
-        print("you lose!")
+            print("you lose!")
 
 
 

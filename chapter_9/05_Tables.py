@@ -1,5 +1,5 @@
 for i in range(2,21):
-     with open(f"Tables_{i}.txt","w") as f:  
+     with open(f"table\Tables_{i}.txt","w") as f:  
         for j in range(1,11):
             line = f"{i} X {j} = {i*j}\n"
             f.write(line)

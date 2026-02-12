@@ -1,0 +1,8 @@
+word = "Donkey"
+with open("file2.txt") as f:
+    content = f.read()
+
+    contentnew = content.replace("#####",word)
+
+with open("file2.txt","w") as f:
+    f.write(contentnew)
